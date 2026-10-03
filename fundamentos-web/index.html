@@ -2,13 +2,14 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Loja Simples - Controle de Produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MeuEstoque</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Mudança nome da pagina 2</h1>
-      <p>Controle de produtos - Aula 1</p>
+      <h1>MeuEstoque</h1>
+      <p>Controle de produtos</p>
     </header>
 
     <main>
@@ -24,20 +25,24 @@
           <label for="quantidade">Quantidade</label>
           <input type="number" id="quantidade" name="quantidade" min="0" placeholder="Ex: 10" required />
 
-          <button type="submit">Adicionar produto</button>
+          <p id="mensagem-erro" class="mensagem-erro" role="alert" hidden></p>
+
+          <button type="submit" id="botao-form">Adicionar produto</button>
+          <button type="button" id="botao-cancelar" class="botao-cancelar" hidden>Cancelar edição</button>
         </form>
       </section>
 
       <section class="cartao">
         <h2>Produtos cadastrados</h2>
-        <ul id="lista-produtos">
-          <li>Caderno - R$ 12.50 (30 un.)</li>
-          <li>Caneta - R$ 2.00 (100 un.)</li>
-          <li>Mochila - R$ 89.90 (8 un.)</li>
-          <li>Estojo - R$ 15.00 (20 un.)</li>
-        </ul>
+        <p id="contador" class="contador">Produtos cadastrados: 0</p>
+        <p id="mensagem-vazia" class="mensagem-vazia">Nenhum produto cadastrado.</p>
+        <ul id="lista-produtos"></ul>
       </section>
     </main>
+
+    <footer>
+      <p>MeuEstoque &copy; 2026 — Projeto da disciplina de Fundamentos Web, feito com HTML, CSS e JavaScript puro.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
